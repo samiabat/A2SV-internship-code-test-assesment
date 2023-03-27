@@ -37,6 +37,7 @@ class TestCapitalize(unittest.TestCase):
         self.assertEqual(capitalize('Sefineh'), 'Sefineh')
         self.assertEqual(capitalize('sefineh'), 'Sefineh')
         self.assertEqual(capitalize('SEFINEH'), 'Sefineh')
+        #Check invalid conditions
         self.assertNotEqual(capitalize('SEFINEH'), 'sEfINEH')
         self.assertNotEqual(capitalize('Sefineh'), 'sefineh')
         self.assertNotEqual(capitalize('sefineh'), 'sEfineh')

@@ -1,5 +1,5 @@
 import unittest
-from string_functions import to_upper, to_lower, capitalize
+from string_functions_sefineh import to_upper, to_lower, capitalize
 
 class TestToUpper(unittest.TestCase):
     def test_to_upper(self):

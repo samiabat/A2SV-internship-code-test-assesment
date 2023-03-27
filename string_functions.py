@@ -6,7 +6,6 @@ def to_upper(string):
             result.append(chr(ord(char) - 32))
         else:
             result.append(char)
-
     return "".join(result)
 
 def to_lower(string):

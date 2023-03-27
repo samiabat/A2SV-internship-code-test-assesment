@@ -27,11 +27,17 @@ class TestToLower(unittest.TestCase):
         
 class TestCapitalize(unittest.TestCase):
     def test_capitalize(self):
+        #Check with numbers as they couldn't be changed
+        self.assertEqual(capitalize('90'), '90')
+        #Check the capitalize method with different edge cases
+        self.assertEqual(capitalize('Sefineh'), 'Sefineh')
+        self.assertEqual(capitalize('sefineh'), 'Sefineh')
+        self.assertEqual(capitalize('SEFINEH'), 'Sefineh')
+        self.assertNotEqual(capitalize('SEFINEH'), 'sEfINEH')
+        self.assertNotEqual(capitalize('Sefineh'), 'sefineh')
+        self.assertNotEqual(capitalize('sefineh'), 'sEfineh')
+        self.assertNotEqual(capitalize('SEFINEH'), 'SefineH')
         
-        self.assertEqual(capitalize("hello world"), "Hello world")
-        self.assertEqual(capitalize("HELLO WORLD"), "Hello world")
-        self.assertEqual(capitalize("Hello World"), "Hello world")
-        self.assertEqual(capitalize(""), "")
-        
+
 if __name__ == '__main__':
     unittest.main()

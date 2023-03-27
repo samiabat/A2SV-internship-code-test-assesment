@@ -14,7 +14,7 @@ def to_lower(string):
 
     for char in string:
         if 65 <= ord(char) <= 90:
-            result.append(chr(ord(char) - 32))
+            result.append(chr(ord(char) + 32))
         else:
             result.append(char)
             
@@ -23,8 +23,7 @@ def to_lower(string):
 def capitalize(string):
     result = ""
 
-    if result:
+    if string:
         result += to_upper(string[0])
     result += to_lower(string[1:])
-
     return result

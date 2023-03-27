@@ -10,6 +10,7 @@ class TestToUpper(unittest.TestCase):
         
 class TestToLower(unittest.TestCase):
     def test_to_lower(self):
+        
         self.assertEqual(to_lower("WORLD"), "world")
         self.assertEqual(to_lower("world"), "world")
         self.assertEqual(to_lower("World"), "world")
@@ -17,6 +18,7 @@ class TestToLower(unittest.TestCase):
         
 class TestCapitalize(unittest.TestCase):
     def test_capitalize(self):
+        
         self.assertEqual(capitalize("hello world"), "Hello world")
         self.assertEqual(capitalize("HELLO WORLD"), "Hello world")
         self.assertEqual(capitalize("Hello World"), "Hello world")

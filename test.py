@@ -5,9 +5,11 @@ class TestToUpper(unittest.TestCase):
     def test_to_upper(self):
         #Check the number, there couldn't be any change
         self.assertEqual(to_upper('43'), '43')
-        self.assertEqual(to_lower('54'), '54')
         #Check the to_upper method with
         #different edge cases
+        self.assertEqual(to_upper('sefineh'), "SEFINEH")
+        self.assertEqual(to_upper('SEFINEH'), 'SEFINEH')
+        #Check invalid conditions
         self.assertNotEqual(to_upper('False'), 'False')
         self.assertNotEqual(to_upper('False'), 'false')
         self.assertNotEqual(to_upper('False'), 'FALSe')
@@ -17,9 +19,11 @@ class TestToUpper(unittest.TestCase):
 class TestToLower(unittest.TestCase):
     def test_to_lower(self):
         #Check the numbers as they couldn't be changed
+        self.assertEqual(to_lower('54'), '54')
         self.assertEqual(to_lower('78'), '78')
         #Check the to_lower method with different edge cases 
         self.assertEqual(to_lower('False'), 'false')
+        #Check invalid conditions
         self.assertNotEqual(to_lower('False'), 'FALSe')
         self.assertNotEqual(to_lower('false'), 'fALSE')
         self.assertNotEqual(to_lower('false'), 'False')
